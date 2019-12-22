@@ -5,12 +5,23 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const axios = require('axios');
+
 module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
+  api.loadSource(async ({ addCollection }) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-  })
+    const posts = 'https://jsonplaceholder.typicode.com/posts';
+    const { data } = await axios.get(posts);
+
+    const contentType = addCollection({typeName: 'Posts', route: '/post/:id'});
+
+    data.reverse(); // to add in correct order
+    data.forEach(({ id, title, body }) => {
+      contentType.addNode({id, title, fields: {body}});
+    });
+  });
 
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
-  })
-}
+  });
+};
