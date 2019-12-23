@@ -31,6 +31,14 @@
   }
 </page-query>
 
+<script>
+export default {
+  metaInfo: {
+    title: 'Blog'
+  }
+}
+</script>
+
 <style scoped>
 ul {
   padding: 0 5%;

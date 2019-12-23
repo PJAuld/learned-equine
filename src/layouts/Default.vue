@@ -39,13 +39,11 @@ body, html {
   line-height: 1.5;
 }
 
-h1, h4 {
-  text-align: center;
-}
-
 h3 {
   color: #5E3B2A;
+  font-family: Garamond;
   font-size: 2rem;
+  font-style: italic;
 }
 
 nav {
@@ -66,14 +64,13 @@ nav {
   background-size: cover;
   min-height: 100%;
   position: relative;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
+  transition: background-image 1s ease-in-out;
 }
 
 .content {
   background-color: rgb(240, 231, 218, 0.7);
   position: relative;
-  top: 100px;
+  top: 120px;
   width: 100%;
 }
 
@@ -97,7 +94,8 @@ nav {
 }
 
 .nav_link:hover {
-  background-color: #F4986E;
+  background-color: #089b06;
+  color: #FFFFFF;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
