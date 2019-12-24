@@ -4,13 +4,12 @@
       <div class="text">
         <h1>Blog Posts</h1>
         <ul>
-          <li v-for="edge in $page.allPosts.edges" :key="edge.node.id">
-            {{ edge.node.title }}
-            <br />
-            {{ edge.node.body }}
-            <br />
-            <g-link class="blog_link" :to="`blog/${edge.node.id}`">{{ edge.node.id }}</g-link>
-          </li>
+          <BlogPost
+              v-for="edge in $page.allPosts.edges"
+              :key="edge.node.id"
+              :id="edge.node.id"
+              :title="edge.node.title"
+              :body="edge.node.body" />
         </ul>
       </div>
     </div>
@@ -32,14 +31,24 @@
 </page-query>
 
 <script>
+import BlogPost from '~/components/BlogPost.vue';
+
 export default {
+  components: {
+    BlogPost,
+  },
   metaInfo: {
     title: 'Blog'
   }
-}
+};
 </script>
 
 <style scoped>
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .bg {
   background-image: url('../assets/background/blog.jpg');
 }

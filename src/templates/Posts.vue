@@ -22,6 +22,10 @@ query Posts ($id: ID!) {
 </page-query>
 
 <style scoped>
+a {
+  color: inherit;
+}
+
 .back {
   position: relative;
   padding: 3px 0 0 9px;

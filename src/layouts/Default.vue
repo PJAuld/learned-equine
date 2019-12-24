@@ -8,7 +8,7 @@
         <nav>
           <g-link class="nav_link" to="/">Home</g-link>
           <g-link class="nav_link" to="/blog">Blog</g-link>
-          <g-link class="nav_link" to="https://www.youtube.com" target="_blank">YouTube</g-link>
+          <a class="nav_link" href="https://www.youtube.com" target="_blank">YouTube</a>
           <g-link class="nav_link" to="/about/">About</g-link>
           <g-link class="nav_link" to="/contact/">Contact</g-link>
         </nav>
@@ -37,6 +37,11 @@ query {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+a, a:hover, a:active, a:focus {
+  outline: 0;
+  text-decoration: none;
 }
 
 body, html {
@@ -78,6 +83,7 @@ nav {
 }
 
 .content {
+  border-radius: 10px;
   background-color: rgb(240, 231, 218, 0.9);
   position: relative;
   width: 100%;
@@ -92,7 +98,7 @@ nav {
 }
 
 .header {
-  background-color: rgb(241, 237, 225, 1);
+  background-color: #f1ede1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 85px;
@@ -103,15 +109,20 @@ nav {
 }
 
 .nav_link {
+  border: 1px solid #f1ede1;
+  border-radius: 0;
   color: #5E3B2A;
   letter-spacing: 0.1rem;
   margin-left: 2.5vw;
   padding: 7px;
   text-decoration: none;
+  z-index: 1;
 }
 
 .nav_link:hover {
   background-color: #089b06;
+  border: 1px solid #089b06;
+  border-radius: 7%;
   color: #FFFFFF;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
