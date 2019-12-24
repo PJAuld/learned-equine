@@ -13,11 +13,13 @@ module.exports = function (api) {
     const posts = 'https://jsonplaceholder.typicode.com/posts';
     const { data } = await axios.get(posts);
 
-    const contentType = addCollection({typeName: 'Posts', route: '/post/:id'});
+    const contentType = addCollection('Posts');
 
     data.reverse(); // to add in correct order
-    data.forEach(({ id, title, body }) => {
-      contentType.addNode({id, title, fields: {body}});
+    data.forEach(({ id, title, body }, i) => {
+      if (i < 20) {
+        contentType.addNode({id, title, body});
+      }
     });
   });
 

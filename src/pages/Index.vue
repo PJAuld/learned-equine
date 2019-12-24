@@ -1,11 +1,14 @@
 <template>
   <Layout>
-    <div class="body">
-      <div class="content">
-        <h1 class="title main">Learned Equine</h1>
-        <h4 class="title sub">It's pronounced "Learn-ed Equine"</h4>
-      </div>
+    <div class="content_title">
+      <h1 class="title main">Learned Equine</h1>
+      <h4 class="title sub">It's pronounced "Learn-ed"</h4>
     </div>
+    <!-- <div class="content">
+      <div class="text">
+
+      </div>
+    </div> -->
   </Layout>
 </template>
 
@@ -19,11 +22,13 @@ export default {
 
 <style scoped>
 .bg {
-  background-image: url('../assets/index.jpg');
+  background-image: url('../assets/background/index.jpg');
 }
 
-.content {
-  background-color: rgb(0, 0, 0, 0);
+.content_title {
+  margin-bottom: 50vh;
+  position: relative;
+  width: 100%;
 }
 
 .main {

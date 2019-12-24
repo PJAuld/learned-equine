@@ -1,13 +1,15 @@
 <template>
   <Layout>
-    <div class="body">
-      <div class="content">
+    <div class="content">
+      <div class="text">
         <h1>Blog Posts</h1>
         <ul>
           <li v-for="edge in $page.allPosts.edges" :key="edge.node.id">
             {{ edge.node.title }}
-            <br/>
-            {{ edge.node.fields.body }}
+            <br />
+            {{ edge.node.body }}
+            <br />
+            <g-link class="blog_link" :to="`blog/${edge.node.id}`">{{ edge.node.id }}</g-link>
           </li>
         </ul>
       </div>
@@ -22,9 +24,7 @@
         node {
           id
           title
-          fields {
-            body
-          }
+          body
         }
       }
     }
@@ -40,11 +40,11 @@ export default {
 </script>
 
 <style scoped>
-ul {
-  padding: 0 5%;
+.bg {
+  background-image: url('../assets/background/blog.jpg');
 }
 
-.bg {
-  background-image: url('../assets/blog.jpg');
+.blog_link {
+  text-decoration: none;
 }
 </style>

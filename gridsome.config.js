@@ -6,5 +6,12 @@
 
 module.exports = {
   siteName: 'Learned Equine',
-  plugins: []
+  templates: {
+    Posts: [
+      {
+        path: '/blog/:id',
+        component: './src/templates/Posts.vue',
+      }
+    ],
+  }
 };

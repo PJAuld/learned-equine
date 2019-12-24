@@ -1,7 +1,7 @@
 <template>
   <Layout>
-    <div class="body">
-      <div class="content">
+    <div class="content">
+      <div class="text">
         <h1>Contact</h1>
       </div>
     </div>
@@ -18,6 +18,6 @@ export default {
 
 <style scoped>
 .bg {
-  background-image: url('../assets/contact.jpg');
+  background-image: url('../assets/background/contact.jpg');
 }
 </style>

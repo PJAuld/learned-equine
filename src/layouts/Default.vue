@@ -14,7 +14,13 @@
         </nav>
       </div>
     </header>
-    <slot/>
+    <transition name="fade" appear>
+      <main>
+        <div class="body">
+          <slot />
+        </div>
+      </main>
+    </transition>
   </div>
 </template>
 
@@ -39,6 +45,11 @@ body, html {
   line-height: 1.5;
 }
 
+h1 {
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
 h3 {
   color: #5E3B2A;
   font-family: Garamond;
@@ -54,7 +65,7 @@ nav {
 }
 
 .body {
-  padding: 0 10%;
+  padding: 120px 10% 5% 10%;
 }
 
 .bg {
@@ -64,14 +75,20 @@ nav {
   background-size: cover;
   min-height: 100%;
   position: relative;
-  transition: background-image 1s ease-in-out;
 }
 
 .content {
-  background-color: rgb(240, 231, 218, 0.7);
+  background-color: rgb(240, 231, 218, 0.9);
   position: relative;
-  top: 120px;
   width: 100%;
+}
+
+.fade-enter-active {
+  transition: opacity .4s;
+}
+
+.fade-enter {
+  opacity: 0;
 }
 
 .header {
@@ -98,6 +115,10 @@ nav {
   color: #FFFFFF;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
+}
+
+.text {
+  padding: 5vh 5%;
 }
 
 #logo {
