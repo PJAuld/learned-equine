@@ -24,6 +24,16 @@ query Posts ($id: ID!) {
 <style scoped>
 a {
   color: inherit;
+  padding: 0 5px;
+}
+
+a:hover {
+  background-color: #089b06;
+  border: 1px solid #089b06;
+  border-radius: 7%;
+  color: #FFFFFF;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 .back {

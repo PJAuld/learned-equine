@@ -3,33 +3,44 @@
     <div class="content">
       <div class="text">
         <h1>About</h1>
-        <h2>Kellie Auld</h2>
-        <div class="section">
-          <div class="img_wrapper">
-            <g-image class="headshot" src="../assets/images/kellie.jpg" />
+        <div class="wrapper">
+          <h2>Kellie Auld</h2>
+          <div class="section a">
+            <div class="img_wrapper">
+              <g-image class="headshot" src="../assets/images/kellie.jpg" />
+            </div>
+            <p class="left">{{ PLACEHOLDER }}</p>
           </div>
-          <p>{{ PLACEHOLDER }}</p>
         </div>
-        <h2>Little Girl</h2>
-        <div class="section">
-          <div class="img_wrapper">
-            <g-image class="headshot" src="../assets/images/lita.jpg" />
+        <div class="wrapper">
+          <h2 class="title_right">Little Girl</h2>
+          <div class="section b">
+            <p class="right">{{ PLACEHOLDER }}</p>
+            <div class="img_wrapper">
+              <g-image class="headshot" src="../assets/images/lita.jpg" />
+            </div>
           </div>
-          <p>{{ PLACEHOLDER }}</p>
         </div>
-        <h2>Obi</h2>
-        <div class="section">
-          <div class="img_wrapper">
-            <g-image class="headshot" src="../assets/images/obi.jpg" />
+        <div class="wrapper">
+          <h2>Obi</h2>
+          <div class="section a">
+            <div class="img_wrapper">
+              <g-image class="headshot" src="../assets/images/obi.jpg" />
+            </div>
+            <p class="left">{{ PLACEHOLDER }}</p>
           </div>
-          <p>{{ PLACEHOLDER }}</p>
         </div>
-        <h2>Parker and Jovi</h2>
-        <div class="section">
-          <div class="img_wrapper">
-            <g-image class="headshot" src="../assets/images/parker_jovi.jpg" />
+        <div class="wrapper">
+          <h2 class="title_right">Parker and Jovi</h2>
+          <div class="section b">
+            <p class="right">Bunny bunny bunny bunny bunny bunny bunny bunny
+             bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny
+            bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny
+             bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny</p>
+            <div class="img_wrapper">
+              <g-image class="headshot" src="../assets/images/parker_jovi.jpg" />
+            </div>
           </div>
-          <p>{{ PLACEHOLDER }}</p>
         </div>
       </div>
     </div>
@@ -65,6 +76,7 @@ h1 {
 
 h2 {
   margin: 0 0 1vh 5vh;
+  padding-top: 2vh;
 }
 
 p {
@@ -81,7 +93,6 @@ p {
   position: absolute;
   width: 100%;
 }
-
 .img_wrapper {
   margin: auto;
   overflow: hidden;
@@ -90,9 +101,34 @@ p {
   width: 80%;
 }
 
+.right {
+  padding-left: 2.5vw;
+}
+.left {
+  padding-right: 2.5vw
+}
+
 .section {
   display: grid;
-  grid-template-columns: 30% 70%;
   margin-bottom: 5vh;
+}
+.a {
+  grid-template-columns: 30% 70%;
+}
+.b {
+  grid-template-columns: 70% 30%;
+}
+
+.title_right {
+  text-align: right;
+  padding-right: 2.5vw;
+}
+
+.wrapper {
+  border: 1px solid #a39d94;
+  border-radius: 10px;
+  height: auto;
+  margin: 5px;
+  padding: 2px;
 }
 </style>
