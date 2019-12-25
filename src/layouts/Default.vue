@@ -39,15 +39,15 @@ query {
   padding: 0;
 }
 
-a, a:hover, a:active, a:focus {
-  outline: 0;
-  text-decoration: none;
-}
-
 body, html {
   height: 100%;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
+}
+
+a, a:hover, a:active, a:focus {
+  outline: 0;
+  text-decoration: none;
 }
 
 h1 {
