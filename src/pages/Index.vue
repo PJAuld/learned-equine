@@ -136,4 +136,10 @@ ul {
 .reposition {
   object-position: 0;
 }
+
+@media (max-width: 425px) {
+  ul {
+    grid-template-columns: 1fr;
+  }
+}
 </style>

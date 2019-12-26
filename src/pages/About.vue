@@ -33,10 +33,7 @@
         <div class="wrapper">
           <h2 class="title_right">Parker and Jovi</h2>
           <div class="section b">
-            <p class="right">Bunny bunny bunny bunny bunny bunny bunny bunny
-             bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny
-            bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny
-             bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny</p>
+            <p class="right">{{ BUNNY_PLACEHOLDER }}</p>
             <div class="img_wrapper">
               <g-image class="headshot" src="../assets/images/parker_jovi.jpg" />
             </div>
@@ -55,10 +52,15 @@ const PLACEHOLDER = `Lorem ipsum dolor sit amet, consectetur adipisicing elit,
     voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
     occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
     anim id est laborum.`;
+const BUNNY_PLACEHOLDER = `Bunny bunny bunny bunny bunny bunny bunny bunny
+    bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny
+    bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny
+    bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny bunny`
 
 export default {
   data() {
     return {
+      BUNNY_PLACEHOLDER,
       PLACEHOLDER,
     }
   },
@@ -130,5 +132,15 @@ p {
   height: auto;
   margin: 5px;
   padding: 2px;
+}
+
+@media (max-width: 425px) {
+  h2, .title_right {
+    margin-left: 0;
+    text-align: center;
+  }
+  .a, .b {
+    grid-template-columns: 100%;
+  }
 }
 </style>

@@ -56,4 +56,10 @@ ul {
 .blog_link {
   text-decoration: none;
 }
+
+@media (max-width: 425px) {
+  ul {
+    grid-template-columns: 100%;
+  }
+}
 </style>
