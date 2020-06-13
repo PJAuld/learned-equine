@@ -3,39 +3,41 @@
     <div class="content">
       <div class="text">
         <h1>About</h1>
-        <div class="wrapper">
-          <h2>Kellie Auld</h2>
-          <div class="section a">
-            <div class="img_wrapper">
-              <g-image class="headshot" src="../assets/images/kellie.jpg" />
-            </div>
-            <p class="left">{{ PLACEHOLDER }}</p>
-          </div>
-        </div>
-        <div class="wrapper">
-          <h2 class="title_right">Little Girl</h2>
-          <div class="section b">
-            <p class="right">{{ PLACEHOLDER }}</p>
-            <div class="img_wrapper">
-              <g-image class="headshot" src="../assets/images/lita.jpg" />
+        <div class="about">
+          <div class="entity">
+            <h2>Kellie Auld</h2>
+            <div class="section a">
+              <div class="img_wrapper">
+                <g-image class="headshot" src="../assets/images/kellie.jpg" />
+              </div>
+              <p class="left">{{ PLACEHOLDER }}</p>
             </div>
           </div>
-        </div>
-        <div class="wrapper">
-          <h2>Obi</h2>
-          <div class="section a">
-            <div class="img_wrapper">
-              <g-image class="headshot" src="../assets/images/obi.jpg" />
+          <div class="entity">
+            <h2 class="title_right">Little Girl</h2>
+            <div class="section b">
+              <div class="img_wrapper">
+                <g-image class="headshot" src="../assets/images/lita.jpg" />
+              </div>
+              <p class="right">{{ PLACEHOLDER }}</p>
             </div>
-            <p class="left">{{ PLACEHOLDER }}</p>
           </div>
-        </div>
-        <div class="wrapper">
-          <h2 class="title_right">Parker and Jovi</h2>
-          <div class="section b">
-            <p class="right">{{ BUNNY_PLACEHOLDER }}</p>
-            <div class="img_wrapper">
-              <g-image class="headshot" src="../assets/images/parker_jovi.jpg" />
+          <div class="entity">
+            <h2>Obi</h2>
+            <div class="section a">
+              <div class="img_wrapper">
+                <g-image class="headshot" src="../assets/images/obi.jpg" />
+              </div>
+              <p class="left">{{ PLACEHOLDER }}</p>
+            </div>
+          </div>
+          <div class="entity">
+            <h2 class="title_right">Parker and Jovi</h2>
+            <div class="section b">
+              <div class="img_wrapper">
+                <g-image class="headshot" src="../assets/images/parker_jovi.jpg" />
+              </div>
+              <p class="right">{{ BUNNY_PLACEHOLDER }}</p>
             </div>
           </div>
         </div>
@@ -71,36 +73,43 @@ export default {
 </script>
 
 <style scoped>
+.bg {
+  background-image: url('../assets/background/about.jpg');
+}
+
 h1 {
   text-align: center;
   margin-bottom: 5vh;
 }
 
 h2 {
-  margin: 0 0 1vh 5vh;
+  margin: 0 0 1vh 6vh;
   padding-top: 2vh;
 }
-
 p {
   padding: 1%;
 }
 
-.bg {
-  background-image: url('../assets/background/about.jpg');
+.entity {
+  border: 1px solid #a39d94;
+  border-radius: 10px;
+  height: auto;
+  margin: 5px;
+  padding: 2px;
 }
 
-.headshot {
-  min-height: 100%;
-  min-width: 100%;
-  position: absolute;
-  width: 100%;
-}
 .img_wrapper {
   margin: auto;
   overflow: hidden;
   padding-bottom: 80%;
   position: relative;
   width: 80%;
+}
+.headshot {
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  width: 100%;
 }
 
 .right {
@@ -124,14 +133,6 @@ p {
 .title_right {
   text-align: right;
   padding-right: 2.5vw;
-}
-
-.wrapper {
-  border: 1px solid #a39d94;
-  border-radius: 10px;
-  height: auto;
-  margin: 5px;
-  padding: 2px;
 }
 
 @media (max-width: 425px) {
