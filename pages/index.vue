@@ -50,7 +50,7 @@ ul {
 }
 
 .bg {
-  background-image: url('../assets/background/index.jpg');
+  background-image: url('../assets/background/contact.jpg');
 }
 
 .content_title {

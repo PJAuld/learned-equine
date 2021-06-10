@@ -2,7 +2,11 @@
   <div class="bg">
     <header class="header">
       <div id="logo">
-        <NuxtLink to="/"><h3>Learned Equine</h3></NuxtLink>
+        <NuxtLink to="/">
+          <!-- <img id="head_img" src="~/assets/images/kellie.jpg" /> -->
+          <div id="home_img"></div>
+          <h3>Learned Equine</h3>
+        </NuxtLink>
       </div>
       <div id="menu">
         <input class="toggle" type="checkbox" />
@@ -47,9 +51,7 @@ h1 {
   margin-bottom: 5vh;
 }
 
-#logo {
-  padding: 18px 5% 18px 5%;
-}
+
 h3 {
   color: #5E3B2A;
   font-family: Garamond;
@@ -65,7 +67,7 @@ nav {
 }
 
 .body {
-  padding: 120px 10% 5% 10%;
+  padding: 120px 20px 20px 20px;
 }
 
 .bg {
@@ -85,15 +87,14 @@ nav {
 
 .content {
   border-radius: 10px;
-  background-color: rgb(240, 231, 218, 0.9);
+  background-color: rgb(240, 231, 218, 0.8);
   position: relative;
   width: 100%;
 }
 
 .header {
-  background-color: #f1ede1;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  background-color: rgb(240, 231, 218, 0.8);
+  display: flex;
   height: 85px;
   position: fixed;
   top: 0;
@@ -157,7 +158,20 @@ nav {
   padding: 5vh 5%;
 }
 
+#home_img {
+  background-color: #089b06;
+  border-radius: 100%;
+  height: 75px;
+  width: 75px;
+}
+
+#logo {
+  display: flexbox;
+  flex-direction: row;
+}
+
 #menu {
+  display: flexbox;
   position: relative;
 }
 
